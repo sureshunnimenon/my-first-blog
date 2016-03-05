@@ -1,0 +1,49 @@
+VIRTUAL ENVIRONMENT
+
+first create project directory, say pythontut
+
+in the project directory, command 
+    virtualenv env
+    
+above will produce following output
+
+New Python executable in ..../pythontut/env/bin/python
+
+installing setuptools, pip, wheel done
+
+now, if we do cd env, and then list the files/folders inside, we find
+
+bin, include, lib, local
+
+now, if you activate the env, like 
+source /env/bin/activate
+
+then the python installble inside this folder env/bin is used.
+
+================================================
+
+
+GIT
+
+Local GIT
+
+Initialize an empty repository
+
+git init
+
+then, configure the username and e-mail in the local git 
+
+git configure --global user.name sureshnaloor
+git configure --global user.email suresh.naloor@yahoo.com
+
+the above initializations are done once per project
+
+=========================
+.gitignore file is created to identify files and folders not required to add/track in the reposiory for changes
+
+such files are sqlite, static, env (which has python and other executables in bin etc.)
+
+then issue 'git status' command to check...
+
+====================
+
