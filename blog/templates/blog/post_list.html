@@ -9,15 +9,13 @@
         </div>
         
         <div>
-            <p>published: 04.03.2016, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p> This is a testn post I am learning django, and put up this test blog </p>
-        </div>
-        
-        <div>
-            <h2><a href="">My first post</a></h2>
-            <p> Hi there hello world!</p>
-            <p> It works! My django url works! </p>
+           {% for post in posts %}
+    <div>
+        <p>created: {{ post.created_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+            {% endfor %}
     
         </div>
     
