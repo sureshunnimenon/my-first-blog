@@ -47,3 +47,46 @@ then issue 'git status' command to check...
 
 ====================
 
+now, we add the files to repository and issue our first commit
+
+commands are:
+
+git add -A .
+git commit -m "My first django app, first commit"
+
+===============
+
+go to github.com, create new repository 'my-first-blog'
+
+then, push this repository into github
+
+git remote add origin <url for the project>
+
+git push -u origin master (this pushes the local repo into the 'origin' which is the github) 
+
+
+-------------------
+settings done for rango
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT_URLCONF = 'samsure.urls'
+STATIC_URL = '/rango/static/'
+STATIC_PATH = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
+
+===========================
+
+correct settings at last for mysite
+
+create directory static/css under pythontut directory
+
+create file 'blog.css' under the static/css directory
+
+i.e, complete path is /user/suresh/pythontut/static/css/blog.css
+
+in relevant html file under 'template' directory,
+
+{% load staticfiles %}
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
